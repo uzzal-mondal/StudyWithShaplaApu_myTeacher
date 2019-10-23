@@ -1,0 +1,92 @@
+
+# spinner to adding to list..
+        final List<String> categories = new ArrayList<>();
+        categories.add(0, "Select Class");
+        categories.add("Class: 1");
+        categories.add("Class: 2");
+        categories.add("Class: 3");
+        categories.add("Class: 4");
+        categories.add("Class: 5");
+
+
+        for (int i = 1; i < categories.size(); i++) {
+
+            if (student != null) {
+
+                if (student.getSpinner() != null) {
+
+                    if (student.getSpinner().equals(categories.get(i))) {
+                        categories.remove(i);
+                    }
+                }
+            }
+        }
+
+        if (student!=null){
+            categories.add(0, student.getSpinner());
+        }
+        
+        
+        
+        
+        # This is adapter 
+  // style spinner
+        final ArrayAdapter<String> adapter = new
+                ArrayAdapter(context, android.R.layout.simple_spinner_dropdown_item,
+                categories);
+        // Dropdown layout style
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // ataching data adapter to spinner
+        spinner.setAdapter(adapter);
+
+
+        spinner.setSelection(((ArrayAdapter) spinner.getAdapter())
+                .getPosition(spinner.getGravity()));
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, final int position, long l) {
+
+                if (parent.getItemAtPosition(position).equals("Your Class")) {
+                    spinner.setSelection(position);
+
+                    // do nothing
+                } else {
+
+                    showSpinner = parent.getItemAtPosition(position).toString();
+                    
+               }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+
+            }
+        });
+
+        spinner.setAdapter(adapter);
+
+
+# activity main
+
+ <Spinner
+        android:id="@+id/spinner_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_address_id"
+        app:smsp_errorText=""
+        app:smsp_floatingLabelColor="#000"
+        app:smsp_hintColor="#000"
+        app:smsp_itemColor="#000"
+        app:smsp_itemListColor="#000000"
+        app:smsp_itemListHintColor="#FFFFFF"
+        app:smsp_itemListHintBackgroundColor="@color/colorPrimary"
+        app:smsp_multilineError="false"
+        app:smsp_selectedItemListColor="@color/colorPrimary" />
