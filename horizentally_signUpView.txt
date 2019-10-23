@@ -1,0 +1,53 @@
+ ## - fast_part in xml ...  23/10/19
+https://stackoverflow.com/questions/2122199/how-do-i-set-the-rounded-corner-radius-of-a-color-drawable-using-xml
+
+<androidx.cardview.widget.CardView
+
+        android:id="@+id/cardView_id"
+        android:layout_width="129dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_mm"
+
+        android:cornerradius="12dp"
+        app:cardElevation="6dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf=""
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="65dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bg_yellow_rounded_corner"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+## - backgroung button create...
+
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#3ed568"/>
+
+    <corners
+        android:bottomLeftRadius="12dp"
+        android:topLeftRadius="12dp" />
+
+
+
+</shape>
