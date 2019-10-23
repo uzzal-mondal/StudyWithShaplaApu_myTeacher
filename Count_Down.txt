@@ -1,0 +1,15 @@
+ 
+int current_position =0;
+
+new CountDownTimer(30000, 2000) {
+
+            public void onTick(long timeFinished) {
+
+               viewPager.setCurrentItem(current_position++);
+            }
+
+            public void onFinish() {
+
+
+            }
+        }.start();
