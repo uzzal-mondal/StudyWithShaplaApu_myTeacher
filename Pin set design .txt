@@ -1,0 +1,52 @@
+24/10/2019
+https://github.com/alphamu/PinEntryEditText
+https://www.youtube.com/results?search_query=how+to+design+in+pin+in+android+studio+project
+
+
+ <com.alimuzaffar.lib.pin.PinEntryEditText
+            android:id="@+id/txt_pin_entry"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            android:cursorVisible="false"
+            android:digits="1234567890"
+            android:inputType="number"
+           
+
+            android:maxLength="4"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            app:hint="0"
+
+            app:pinBackgroundDrawable="@drawable/bg_pin"
+            app:pinCharacterMask="123"
+            app:pinLineColors="#A21313"
+            app:pinLineStroke="20dp"
+            app:pinLineStrokeSelected="10dp"
+            app:pinTextBottomPadding="20dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+
+
+       <!-- <com.goodiebag.pinview.Pinview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:pinWidth="50dp"
+            app:pinHeight="50dp"
+            app:pinLength="4"
+            app:cursorVisible="false"
+            app:forceKeyboard="true"
+            app:hint="0"
+            app:inputType="text"
+            app:password="false"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
