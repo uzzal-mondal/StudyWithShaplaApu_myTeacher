@@ -1,0 +1,40 @@
+ <androidx.cardview.widget.CardView
+
+        android:id="@+id/cardView_id"
+        android:layout_width="100dp"
+        android:layout_height="687dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/bg_signup_white_rounded_corner"
+
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+
+        app:layout_constraintLeft_toRightOf="@+id/signupNutro_sub_id"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/signupNutro_sub_id"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrant_signUp_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <View
+                android:id="@+id/viewSignUp_yellow_id"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="30dp"
+
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_signup_yellow_rounded_corner"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
