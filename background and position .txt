@@ -1,0 +1,22 @@
+ holder.textCount.setText((position + 1) + "");
+        if (selectedPosition != null) {
+            if (position == selectedPosition) {
+                holder.textCount.setBackgroundResource(R.drawable.bg_square_box);
+                holder.textCount.setTextColor(context.getResources().getColor(R.color.white));
+            } else {
+                holder.textCount.setBackgroundResource(R.drawable.bg_square_white);
+                holder.textCount.setTextColor(context.getResources().getColor(R.color.color_text));
+            }
+        } else {
+            holder.textCount.setBackgroundResource(R.drawable.bg_square_white);
+            holder.textCount.setTextColor(context.getResources().getColor(R.color.color_text));
+        }
+        holder.textCount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectedPosition = position;
+                notifyDataSetChanged();
+            }
+        });
+
+    }
