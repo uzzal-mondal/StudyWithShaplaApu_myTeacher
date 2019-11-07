@@ -1,0 +1,174 @@
+
+1. ## activity schedule
+        <Spinner
+            android:id="@+id/spinner_id"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/bg_spinner"
+            android:dropDownSelector="#ff2222"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+2. ## row xml file:---
+    <TextView
+        android:id="@+id/textSpinnerList_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="January-February"
+        android:textStyle="bold"
+        android:textColor="@color/color_white"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:padding="8dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+3.  ## bg drawable selector:---
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item>
+
+       <layer-list>
+
+           <item>
+
+               <shape android:shape="rectangle">
+
+                  <corners android:radius="12dp"></corners>
+                  <solid android:color="#5DD9DE"></solid>
+
+                 <!-- <padding
+                      android:top="4dp"
+                      android:left="4dp"
+                      android:right="4dp"
+                      android:bottom="4dp"/>
+
+                   <gradient
+                       android:startColor=""
+                       android:endColor="#f364e619"
+                       android:angle="270">
+                   </gradient>-->
+
+
+               </shape>
+
+           </item>
+
+          <item
+              android:drawable="@drawable/spinner_arrow" //this is spinner icon in drawable.
+              android:left="120dp"/>
+
+
+
+          <!-- <item>
+
+               <bitmap android:gravity="center|right"
+                   android:src="@drawable/spinner_arrow">
+
+               </bitmap>
+
+           </item>-->
+
+
+
+       </layer-list>
+
+
+   </item>
+
+
+</selector>
+
+
+4.##  spinner adapter...
+
+package com.example.nutroapp.schedule;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.nutroapp.R;
+
+public class SpinerAdapter extends BaseAdapter {
+
+    LayoutInflater inflater;
+    private Context context;
+    private String[] month;
+
+    public SpinerAdapter(Context context, String[] month) {
+
+        this.context = context;
+        this.month = month;
+    }
+
+
+    @Override
+    public int getCount() {
+        return month.length;
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return null;
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+
+    @Override
+    public View getView(int position, View view, ViewGroup viewGroup) {
+
+        if (view == null) {
+            inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = inflater.inflate(R.layout.spinner_view, viewGroup, false);
+        }
+        TextView textView = view.findViewById(R.id.textSpinnerList_id);
+        textView.setText(month[position]);
+
+
+        return view;
+    }
+}
+
+
+
+
+5. ## MainActivity & MainPoint  ......
+  Spinner spinner;
+
+    String month[] = {"January-February","Mearch-April","May-June",
+            "July-August","September-Otober",
+            "November-December"};
+
+   spinner =  findViewById(R.id.spinner_id);
+
+ SpinerAdapter spinerAdapter = new SpinerAdapter(this,month);
+        spinner.setAdapter(spinerAdapter);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
+                Toast.makeText(ScheduleActivity.this, ""
+                        +month[position], Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
