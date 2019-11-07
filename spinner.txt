@@ -1,4 +1,7 @@
 
+website best: - https://stackoverflow.com/questions/11188398/how-to-change-the-spinner-background-in-android
+
+
 1. ## activity schedule
         <Spinner
             android:id="@+id/spinner_id"
