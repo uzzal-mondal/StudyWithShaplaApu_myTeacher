@@ -1,6 +1,9 @@
 
 https://github.com/Chivorns/SmartMaterialSpinner
 
+click to below -- this is for best spinner... provide to shapla apu...
+https://stackoverflow.com/questions/1625249/android-how-to-bind-spinner-to-custom-object-list
+
 
 
 # spinner to adding to list..
