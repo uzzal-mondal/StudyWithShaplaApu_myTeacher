@@ -1,4 +1,8 @@
 
+https://github.com/Chivorns/SmartMaterialSpinner
+
+
+
 # spinner to adding to list..
         final List<String> categories = new ArrayList<>();
         categories.add(0, "Select Class");
