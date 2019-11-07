@@ -1,0 +1,125 @@
+ if (position == 0){
+
+            layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+             view = layoutInflater.inflate(R.layout.on_boarding_layout,
+                     container, false);
+
+            ImageView imageSlide = (ImageView) view.findViewById(R.id.
+                    imageSlide_explore_id);
+            ImageView imageSubSlide = (ImageView) view.findViewById(R.id.
+                    imageSlide_subExplore_id);
+            TextView textHeadings = (TextView) view.findViewById(R.id.
+                    textExplore_main_id);
+            TextView textDesc = (TextView) view.findViewById(R.id.
+                    textExplore_sub_id);
+
+            imageSlide.setImageResource(slide_images[position]);
+            imageSubSlide.setImageResource(slide_sub_images[position]);
+
+            textHeadings.setText(slide_headings[position]);
+            textDesc.setText(slide_desc[position]);
+
+        }
+
+        else if (position == 1){
+
+            layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+             view = layoutInflater.inflate(R.layout.on_boarding_layout,
+                     container, false);
+
+            ImageView imageSlide = (ImageView) view.findViewById(R.id.
+                    imageSlide_explore_id);
+            ImageView imageSubSlide = (ImageView) view.findViewById(R.id.
+                    imageSlide_subExplore_id);
+            TextView textHeadings = (TextView) view.findViewById(R.id.
+                    textExplore_main_id);
+            TextView textDesc = (TextView) view.findViewById(R.id.
+                    textExplore_sub_id);
+
+            imageSlide.setImageResource(slide_images[position]);
+            imageSubSlide.setImageResource(slide_sub_images[position]);
+
+            textHeadings.setText(slide_headings[position]);
+            textDesc.setText(slide_desc[position]);
+
+
+
+
+        }
+
+
+         else if (position == 2){
+            layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+             view = layoutInflater.inflate(R.layout.on_boarding_layout, container, false);
+
+            ImageView imageSlide = (ImageView) view.findViewById(R.
+                    id.imageSlide_explore_id);
+            ImageView imageSubSlide = (ImageView) view.findViewById(R.id.
+                    imageSlide_subExplore_id);
+            TextView textHeadings = (TextView) view.findViewById(R.id.
+                    textExplore_main_id);
+            TextView textDesc = (TextView) view.findViewById(R.id.
+                    textExplore_sub_id);
+
+            imageSlide.setImageResource(slide_images[position]);
+            imageSubSlide.setImageResource(slide_sub_images[position]);
+            textHeadings.setText(slide_headings[position]);
+            textDesc.setText(slide_desc[position]);
+
+
+
+        }
+
+        else if (position == 3){
+            layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+             view = layoutInflater.inflate(R.layout.on_boarding_welcome_layout,
+                     container, false);
+
+            ImageView imageRectangle = (ImageView) view.findViewById(R.id.
+                    image_rec_nutro_id);
+            ImageView imageSquare = (ImageView) view.findViewById(R.id.
+                    image_square_nutro_id);
+
+            // button find , this is for used to context ...
+            Button button = view.findViewById(R.id.buttonNutro_id);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                     Intent intent = new Intent(context, NutroSignUpActivity.class);
+                     context.startActivity(intent);
+                }
+            });
+
+            // just okey to done codding
+            TextView textHeadings = (TextView) view.findViewById(R.id.
+                    textHeading_id);
+            TextView textDesc = (TextView) view.findViewById(R.id.
+                    textSub_id);
+            imageRectangle.setImageResource(slide_images[position]);
+            imageSquare.setImageResource(slide_sub_images[position]);
+           // imageSquare.setImageResource(slide_sub_images[position]);
+           // imageSubRec.setImageResource(slide_sub_images[position]);
+            textHeadings.setText(slide_headings[position]);
+            textDesc.setText(slide_desc[position]);
+        }
+
+
+           /* layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+            View view = layoutInflater.inflate(R.layout.on_boarding_layout, container, false);
+
+            ImageView imageSlide = (ImageView) view.findViewById(R.id.imageSlide_explore_id);
+            ImageView imageSubSlide = (ImageView) view.findViewById(R.id.imageSlide_subExplore_id);
+            TextView textHeadings = (TextView) view.findViewById(R.id.textExplore_main_id);
+            TextView textDesc = (TextView) view.findViewById(R.id.textExplore_sub_id);
+
+            imageSlide.setImageResource(slide_images[position]);
+            imageSubSlide.setImageResource(slide_sub_images[position]);
+
+            textHeadings.setText(slide_headings[position]);
+            textDesc.setText(slide_desc[position]);
+
+            container.addView(view);
+            //container.addView(view1);*/
+        container.addView(view);
+
+        return view;
