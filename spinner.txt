@@ -1,5 +1,6 @@
 
 website best: - https://stackoverflow.com/questions/11188398/how-to-change-the-spinner-background-in-android
+                https://stackoverflow.com/questions/16694786/how-to-customize-a-spinner-in-android/37859442#37859442
 
 
 1. ## activity schedule
