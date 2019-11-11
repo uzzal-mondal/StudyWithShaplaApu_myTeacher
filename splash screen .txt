@@ -1,0 +1,58 @@
+  private TextView textSplash,textNutro;
+    private ImageView imageSplash;
+    ConstraintLayout constraintLayout;
+
+    Thread splashThread;
+   // private static int SPLASH_COUNT = 2000;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        /*requestWindowFeature(Window.FEATURE_ACTION_BAR);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);*/
+        setContentView(R.layout.activity_splash_screen);
+
+        ActionBar myActionBar = getSupportActionBar();
+        //find view
+      /*  textSplash = (TextView) findViewById(R.id.textNutro_id);
+        imageSplash = (ImageView) findViewById(R.id.imageNutro_id);*/
+        constraintLayout = findViewById(R.id.constraint_layout_id);
+
+       // animation create.
+        /*Animation animation = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        imageSplash.startAnimation(animation);
+        textSplash.startAnimation(animation);*/
+      //  textNutro.startAnimation(animation);
+/*
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.push_down);
+        imageSplash.startAnimation(animation);
+*/
+       /* Animation animation1 = AnimationUtils.loadAnimation(this, R.anim.push_right);
+        textSplash.startAnimation(animation1);
+        textNutro.startAnimation(animation1);*/
+
+
+      /*  final Intent i = new Intent(this, MainActivity.class);
+
+        Thread timer = new Thread() {
+            public void run() {
+                try {
+                    sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    startActivity(i);
+                    finish();
+                }
+            }
+        };
+        timer.start();*/
+
+
+
+      startActivity(new Intent(SplashScreenActivity.this,MainActivity.class));
+      finish();
