@@ -1,0 +1,17 @@
+https://stackoverflow.com/questions/5280367/android-generate-random-color-on-click
+
+create a method.
+ // using for Random method create ..  ##
+    public int randomColor(){
+        r = new Random();
+        return Color.argb(255,r.nextInt(256),
+                r.nextInt(256),r.nextInt(256));
+
+
+
+    }
+
+
+ // using for Random color .. ## place is onBindViewHolder.
+        randomColor();
+        holder.textView.setBackgroundColor(randomColor());
