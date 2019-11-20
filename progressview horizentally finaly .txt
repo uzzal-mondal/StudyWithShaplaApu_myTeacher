@@ -1,0 +1,54 @@
+ https://github.com/skydoves/ProgressView
+
+
+# vertically.... done..###.........
+
+<com.skydoves.progressview.ProgressView
+        android:id="@+id/progressView"
+        android:layout_width="14dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        
+        app:progressView_colorBackground="#50BBBF"
+        app:progressView_colorProgress="@color/color_white"
+        app:progressView_labelColorOuter="#000"
+        app:progressView_orientation="vertical"
+        
+        app:progressView_labelSpace="10dp"
+        app:progressView_labelText="15%"
+        
+        app:progressView_progress="15"
+        app:progressView_radius="12dp"
+
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_day_id"
+        />
+
+
+
+ progress bar horizentally done..... ####......
+
+ <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressView2"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            app:progressView_colorBackground="@color/color_white"
+            app:progressView_colorProgress="#FFDC49"
+            app:progressView_progress="60"
+            app:progressView_max="100"
+            app:progressView_autoAnimate="true"
+            app:progressView_radius="8dp"
+            app:progressView_padding="1dp"
+            app:progressView_labelColorOuter="#000"
+            app:progressView_labelSize="13sp"
+            app:progressView_labelSpace="10dp"
+            app:progressView_labelTypeface="bold"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_milk_id"
+            app:layout_constraintBottom_toTopOf="@+id/text_orange_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
