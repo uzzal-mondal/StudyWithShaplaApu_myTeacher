@@ -1,0 +1,17 @@
+ RecyclerTodayAdapter todayAdapter = new RecyclerTodayAdapter(this, todayModelList);
+
+        //  GridLayoutManager layoutManager = new GridLayoutManager(this,4);
+
+        GridLayoutManager layoutManager =
+                new GridLayoutManager(this, 2,
+                        RecyclerView.HORIZONTAL, false);
+        layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                return position == 0 ? 2 : 1;
+            }
+        });
+
+        recyclerView.setLayoutManager(layoutManager);
+
+        recyclerView.setAdapter(todayAdapter);
