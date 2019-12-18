@@ -1,17 +1,38 @@
- RecyclerTodayAdapter todayAdapter = new RecyclerTodayAdapter(this, todayModelList);
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="200dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-        //  GridLayoutManager layoutManager = new GridLayoutManager(this,4);
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/item_recipes_long_1"
+        app:layout_constraintBottom_toTopOf="@+id/hour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        GridLayoutManager layoutManager =
-                new GridLayoutManager(this, 2,
-                        RecyclerView.HORIZONTAL, false);
-        layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-            @Override
-            public int getSpanSize(int position) {
-                return position == 0 ? 2 : 1;
-            }
-        });
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:drawablePadding="8dp"
+        android:text="12 min"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        app:drawableStartCompat="@drawable/ic_access_time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview" />
 
-        recyclerView.setLayoutManager(layoutManager);
-
-        recyclerView.setAdapter(todayAdapter);
+</androidx.constraintlayout.widget.ConstraintLayout>
