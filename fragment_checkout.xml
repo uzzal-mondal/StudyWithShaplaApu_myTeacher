@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar_schedulenutrition_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        layout="@layout/custom_toolbar_account"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textmonth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="16dp"
+        android:text="yebook Premium - 1 month"
+        android:textSize="16sp"
+        android:textColor="@color/colorblack"
+        app:fontFamily="@font/roboto_regular"
+        app:layout_constraintBottom_toTopOf="@+id/textruppe"
+        app:layout_constraintRight_toLeftOf="@+id/textruppe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textruppe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/rs"
+        android:textSize="16sp"
+        android:textColor="@color/colorblack"
+        app:fontFamily="@font/roboto_regular"
+
+        app:layout_constraintLeft_toRightOf="@+id/textmonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:background="#FFFBF8"
+        app:layout_constraintTop_toBottomOf="@+id/textruppe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editpromocode"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:layout_weight="1"
+
+            android:textColor="@color/colorview"
+            android:hint="Enter Promo Code"
+            app:layout_constraintRight_toLeftOf="@+id/applybutton"
+            android:textColorHint="@color/colorview"
+            android:background="@drawable/textview_border"
+            app:layout_constraintBottom_toTopOf="@+id/textpromo"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toTopOf="@id/constraint" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/applybutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="24dp"
+
+            android:backgroundTint="@color/colorview"
+            android:text="Apply"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_regular"
+            app:cornerRadius="4dp"
+
+            app:layout_constraintTop_toTopOf="@id/constraint"
+            app:layout_constraintLeft_toRightOf="@+id/editpromocode"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textpromo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+
+            android:text="Promo code applied - FLAT100"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorview"
+            app:layout_constraintTop_toBottomOf="@+id/editpromocode"
+            app:layout_constraintRight_toLeftOf="@+id/textruppe2"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textruppe2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/rshundred"
+
+            android:textSize="16sp"
+            android:textColor="@color/colorview"
+            app:fontFamily="@font/roboto_bold"
+
+            app:layout_constraintLeft_toRightOf="@+id/textpromo"
+            app:layout_constraintTop_toBottomOf="@+id/editpromocode"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/totaltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+
+        android:text="@string/total"
+        android:textColor="@color/colorblack"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:text="@string/totalrupe"
+        android:textColor="@color/colorblack"
+        android:textSize="16sp"
+        app:fontFamily="@font/roboto_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/totaltext"
+        app:layout_constraintTop_toBottomOf="@+id/constraint" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonpayment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+
+        android:layout_marginTop="24dp"
+        app:cornerRadius="8dp"
+        android:textSize="16sp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.1"
+        android:text="@string/checkout"
+        android:fontFamily="@font/roboto_regular"
+
+        android:textAllCaps="false"
+        app:backgroundTint="#F57085"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totaltext" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
